@@ -257,7 +257,16 @@ func scanFiles(args *options) error {
 	if len(args.paths) == 0 {
 		return scanStdin(args, regex)
 	}
+	isDir := false
 	for _, path := range args.paths {
+		isDir, e = isDirectory(path)
+		if e != nil {
+			return fmt.Errorf("Error checking if file is directory: %s\n", e)
+		}
+		if isDir {
+			fmt.Printf("Directory: %s\n", path)
+			continue
+		}
 		file, e = os.Open(path)
 		if e != nil {
 			return fmt.Errorf("Error opening file: %s", e)
