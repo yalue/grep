@@ -12,6 +12,8 @@ Compiling / Installation
 ------------------------
 
 For simple installation, just run `go install github.com/yalue/grep`.
+Alternatively, download links for Windows can be found on [the releases
+page](https://github.com/yalue/grep/releases).
 
 Usage
 -----
