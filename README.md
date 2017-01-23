@@ -18,12 +18,12 @@ page](https://github.com/yalue/grep/releases).
 Usage
 -----
 
-The regular expression supports Go's regular expression syntax. The file path
-accepts wildcards, and will be expanded according to Go's `filepath.Glob()`.
-Running the program with the `--help` argument will display usage information.
 Basic usage: `grep [flags] <expression> [file paths]`. If no file paths are
 provided, the program will read from standard input.
 
+The regular expression supports Go's regular expression syntax. The file path
+accepts wildcards, and will be expanded according to Go's `filepath.Glob()`.
+Running the program with the `--help` argument will display usage information.
 The following flags are supported, with behavior identical to GNU grep:
 
  - `-i`: Perform case-insensitive matching.
